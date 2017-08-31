@@ -14,6 +14,10 @@ import com.google.firebase.database.DatabaseException;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class TimActivity extends AppCompatActivity {
 
     private EditText etImeTima;
@@ -31,7 +35,12 @@ public class TimActivity extends AppCompatActivity {
 
     //Firebase setup
     private DatabaseReference databaseReference;
+    private DatabaseReference childTimovi;
+    private DatabaseReference childMojTim;
     SharedPreferences sharedpreferences;
+
+    private String imeTima = "", korisnici = "", tkoUlog = "", podrucja = "";
+    private int net, vjera = 0, ulog = 0, realno = 0, motivacija = 0, sansaUlog = 0, brojClanova = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,38 +82,58 @@ public class TimActivity extends AppCompatActivity {
     }
 
     private void addToFirebase() {
+        imeTima = etImeTima.getText().toString();
+        korisnici = etKorisnici.getText().toString();
+        net = Integer.parseInt(etNet.getText().toString());
+        vjera = Integer.parseInt(etVjera.getText().toString());
+        ulog = Integer.parseInt(etUlog.getText().toString());
+        realno = Integer.parseInt(etRealno.getText().toString());
+        tkoUlog = etTkoUlog.getText().toString();
+        motivacija = Integer.parseInt(etMotivacija.getText().toString());
+        podrucja = etPodrucja.getText().toString();
+        sansaUlog = Integer.parseInt(etSansaUlog.getText().toString());
+        brojClanova = Integer.parseInt(etBrojClanova.getText().toString());
+
+        /*if ("".equals(net)) {
+            net = 0;
+        } else {
+            net = Integer.parseInt(etNet.getText().toString());
+        }*/
+
         sharedpreferences = getSharedPreferences(POJO.KEY_MOJ_SHARED_PREFERENCES, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedpreferences.edit();
 
-        String ime_tima = (etImeTima.getText().toString() + (int) (Math.round(Math.random() * 100.0) / 100.0 * 100));
-        editor.putString(POJO.KEY_IME_TIMA, ime_tima);
+        String ime_tima_sifra = (imeTima + (int) (Math.round(Math.random() * 100.0) / 100.0 * 100));
+        editor.putString(POJO.KEY_IME_TIMA, ime_tima_sifra);
         editor.commit();// commit is important here.
 
         try {
-            int broj_clanova = Integer.parseInt(etBrojClanova.getText().toString());
-            editor.putInt(POJO.KEY_BROJ_CLANOVA, broj_clanova);
+            editor.putInt(POJO.KEY_BROJ_CLANOVA, brojClanova);
             editor.commit();// commit is important here.
             Log.d("broj_shared", "" + sharedpreferences.getInt(POJO.KEY_BROJ_CLANOVA, 0));
-        } catch(NumberFormatException nfe) {
+        } catch (NumberFormatException nfe) {
             Log.d("broj_clanova", etBrojClanova.getText().toString());
         }
 
         try {
-            DatabaseReference childNewTeam = databaseReference.child("Timovi").child(ime_tima);
+            childTimovi = databaseReference.child("Timovi");
 
-            childNewTeam.child("Broj korisnika koje ce zahvatiti projekt").setValue(etKorisnici.getText().toString());
-            childNewTeam.child("Koliko takvih projekata postoji na netu").setValue(etNet.getText().toString());
-            childNewTeam.child("Koliko vi vjerujete da ce projekt uspjeti").setValue(etVjera.getText().toString());
-            childNewTeam.child("Koliko cete uloziti u projekt").setValue(etUlog.getText().toString());
-            childNewTeam.child("Koliko je realno da ce projekt uspjeti").setValue(etRealno.getText().toString());
-            childNewTeam.child("Tko ce uloziti u projekt").setValue(etTkoUlog.getText().toString());
-            childNewTeam.child("Koja je motivacija za projekt").setValue(etMotivacija.getText().toString());
-            childNewTeam.child("Checkirajte koja sva podrucja pokriva projekt").setValue(etPodrucja.getText().toString());
-            childNewTeam.child("Kolika je sansa da ce netko uloziti u vas projekt").setValue(etSansaUlog.getText().toString());
-            childNewTeam.child("Koliko je clanova u vasem timu").setValue(etBrojClanova.getText().toString());
+            childMojTim = childTimovi.child(ime_tima_sifra);
+
+            childMojTim.child("Broj korisnika koje ce zahvatiti projekt").setValue(korisnici);
+            childMojTim.child("Koliko takvih projekata postoji na netu").setValue(net);
+            childMojTim.child("Koliko vi vjerujete da ce projekt uspjeti").setValue(vjera);
+            childMojTim.child("Koliko cete uloziti u projekt").setValue(ulog);
+            childMojTim.child("Koliko je realno da ce projekt uspjeti").setValue(realno);
+            childMojTim.child("Tko ce uloziti u projekt").setValue(tkoUlog);
+            childMojTim.child("Koja je motivacija za projekt").setValue(motivacija);
+            childMojTim.child("Checkirajte koja sva podrucja pokriva projekt").setValue(podrucja);
+            childMojTim.child("Kolika je sansa da ce netko uloziti u vas projekt").setValue(sansaUlog);
+            childMojTim.child("Koliko je clanova u vasem timu").setValue(brojClanova);
         } catch (DatabaseException e) {
-            Log.d("Ime tima",ime_tima);
+            Log.d("Ime tima", ime_tima_sifra);
         }
+
     }
 
     private void startIntent() {
@@ -112,6 +141,7 @@ public class TimActivity extends AppCompatActivity {
         startActivity(intent);
     }
 }
+
 
 
 

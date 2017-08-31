@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity
         setupToolbar();
         setupNavigationDrawer();
         setupListeners();
-        addToFirebase();
-        firebaseQueryUpdateRoot();
+//        addToFirebase();
+//        firebaseQueryUpdateRoot();
     }
 
     private void setupFirebase() {
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity
 
     private void initViews() {
         fab = (FloatingActionButton) findViewById(R.id.fab);
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar_clan);
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         btnTim = (Button) findViewById(R.id.btnTim);
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addToFirebase();
+//                addToFirebase();
             }
         });
 
