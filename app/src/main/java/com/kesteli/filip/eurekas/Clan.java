@@ -9,18 +9,18 @@ public class Clan {
 
     private String ime;
     private String prezime;
-    private String godine;
-    private String tehnoIskustvo;
-    private String iskustvo;
-    private String obrazovanje;
-    private String znanje;
-    private String dani;
-    private String tehnoDani;
+    private int godine;
+    private int tehnoIskustvo;
+    private int iskustvo;
+    private int obrazovanje;
+    private int znanje;
+    private int dani;
+    private int tehnoDani;
 
     public Clan() {
     }
 
-    public Clan(String ime, String prezime, String godine, String tehnoIskustvo, String iskustvo, String obrazovanje, String znanje, String dani, String tehnoDani) {
+    public Clan(String ime, String prezime, int godine, int tehnoIskustvo, int iskustvo, int obrazovanje, int znanje, int dani, int tehnoDani) {
         this.ime = ime;
         this.prezime = prezime;
         this.godine = godine;
@@ -48,62 +48,59 @@ public class Clan {
         this.prezime = prezime;
     }
 
-    public String getGodine() {
+    public int getGodine() {
         return godine;
     }
 
-    public void setGodine(String godine) {
+    public void setGodine(int godine) {
         this.godine = godine;
     }
 
-    public String getTehnoIskustvo() {
+    public int getTehnoIskustvo() {
         return tehnoIskustvo;
     }
 
-    public void setTehnoIskustvo(String tehnoIskustvo) {
+    public void setTehnoIskustvo(int tehnoIskustvo) {
         this.tehnoIskustvo = tehnoIskustvo;
     }
 
-    public String getIskustvo() {
+    public int getIskustvo() {
         return iskustvo;
     }
 
-    public void setIskustvo(String iskustvo) {
+    public void setIskustvo(int iskustvo) {
         this.iskustvo = iskustvo;
     }
 
-    public String getObrazovanje() {
+    public int getObrazovanje() {
         return obrazovanje;
     }
 
-    public void setObrazovanje(String obrazovanje) {
+    public void setObrazovanje(int obrazovanje) {
         this.obrazovanje = obrazovanje;
     }
 
-    public String getZnanje() {
+    public int getZnanje() {
         return znanje;
     }
 
-    public void setZnanje(String znanje) {
+    public void setZnanje(int znanje) {
         this.znanje = znanje;
     }
 
-    public String getDani() {
+    public int getDani() {
         return dani;
     }
 
-    public void setDani(String dani) {
+    public void setDani(int dani) {
         this.dani = dani;
     }
 
-    public String getTehnoDani() {
+    public int getTehnoDani() {
         return tehnoDani;
     }
 
-    public void setTehnoDani(String tehnoDani) {
+    public void setTehnoDani(int tehnoDani) {
         this.tehnoDani = tehnoDani;
     }
 }
-
-
-

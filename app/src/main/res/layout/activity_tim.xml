@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.kesteli.filip.eurekas.TimActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:foreground="?selectableItemBackground"
+            card_view:cardBackgroundColor="@color/colorPrimary"
+            card_view:cardCornerRadius="8dp"
+            card_view:cardElevation="3dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPadding="4dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/etImeTima"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ime tima" />
+
+                <!--Koliko je ljudi (korisnika) koje će zahvatiti projekt-->
+                <EditText
+                    android:id="@+id/etKorisnici"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Koliko je ljudi (korisnika) koje će zahvatiti projekt"
+                    android:inputType="number"
+                    android:text="5" />
+
+                <!--Koliko takvih projekata postoji na netu-->
+                <EditText
+                    android:id="@+id/etNet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Koliko takvih projekata postoji na netu"
+                    android:inputType="number"
+                    android:text="5" />
+
+                <!--Koliko vi vjerujete da ce projekt uspjeti-->
+                <EditText
+                    android:id="@+id/etVjera"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Koliko vi vjerujete da ce projekt uspjeti"
+                    android:inputType="number"
+                    android:text="5" />
+
+                <!--Koliko cete uloziti u projekt-->
+                <EditText
+                    android:id="@+id/etUlog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Koliko cete uloziti u projekt"
+                    android:inputType="number"
+                    android:text="5" />
+
+                <!--Koliko je realno da ce projekt uspjeti-->
+                <EditText
+                    android:id="@+id/etRealno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Koliko je realno da ce projekt uspjeti"
+                    android:inputType="number"
+                    android:text="5" />
+
+                <!--Tko ce uloziti u projekt-->
+                <EditText
+                    android:id="@+id/etTkoUlog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tko ce uloziti u projekt" />
+
+                <!--Koja je motivacija za projekt-->
+                <EditText
+                    android:id="@+id/etMotivacija"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Koja je motivacija za projekt" />
+
+                <!--Checkirajte koja sva podrucja pokriva projekt-->
+                <EditText
+                    android:id="@+id/etPodrucja"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Checkirajte koja sva podrucja pokriva projekt" />
+
+                <!--Kolika je sansa da ce netko uloziti u vas projekt-->
+                <EditText
+                    android:id="@+id/etSansaUlog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Kolika je sansa da ce netko uloziti u vas projekt"
+                    android:inputType="number"
+                    android:text="5" />
+
+                <!--Koliko je clanova u vasem timu-->
+                <EditText
+                    android:id="@+id/etBrojClanova"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Koliko je clanova u vasem timu"
+                    android:inputType="number"
+                    android:text="5" />
+
+                <Button
+                    android:id="@+id/btnMembers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Clanovi" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>
