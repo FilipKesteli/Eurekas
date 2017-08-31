@@ -1,0 +1,148 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:clickable="true"
+        android:foreground="?selectableItemBackground"
+        card_view:cardBackgroundColor="@color/colorPrimary"
+        card_view:cardCornerRadius="8dp"
+        card_view:cardElevation="3dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:contentPadding="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/etIme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:ems="10"
+                android:hint="Ime"
+                android:inputType="textPersonName"
+                android:text="" />
+
+            <EditText
+                android:id="@+id/etPrezime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/etIme"
+                android:ems="10"
+                android:hint="Prezime"
+                android:inputType="textPersonName"
+                android:text="" />
+
+            <EditText
+                android:id="@+id/etGodine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/etPrezime"
+                android:ems="10"
+                android:hint="Godine"
+                android:inputType="number"
+                android:text="" />
+
+            <EditText
+                android:id="@+id/etTehnoIskustvo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/etGodine"
+                android:ems="10"
+                android:hint="Iskustvo u danoj tehnologiji"
+                android:inputType="number"
+                android:text="" />
+
+            <EditText
+                android:id="@+id/etIskustvo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/etTehnoIskustvo"
+                android:ems="10"
+                android:hint="Iskustvo opcenito"
+                android:inputType="number"
+                android:text="" />
+
+            <!--Spinner-->
+            <EditText
+                android:id="@+id/etObrazovanje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/etIskustvo"
+                android:ems="10"
+                android:hint="Stupanj obrazovanja"
+                android:inputType="textPersonName"
+                android:text="" />
+
+            <!--SeekBar-->
+            <EditText
+                android:id="@+id/etZnanje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/etObrazovanje"
+                android:ems="10"
+                android:hint="Znanje u danoj tehnologiji"
+                android:inputType="textPersonName"
+                android:text="" />
+
+            <EditText
+                android:id="@+id/etDani"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/etZnanje"
+                android:ems="10"
+                android:hint="Koliko dana covjek nije bio na poslu opcenito"
+                android:inputType="number"
+                android:text="" />
+
+            <EditText
+                android:id="@+id/etTehnoDani"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/etDani"
+                android:ems="10"
+                android:hint="Koliko dana covjek nije radio na danoj tehnologiji"
+                android:inputType="number"
+                android:text="" />
+
+            <Button
+                android:id="@+id/btnPotvrdi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/etTehnoDani"
+                android:layout_marginLeft="14dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="11dp"
+                android:text="POTVRDI" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

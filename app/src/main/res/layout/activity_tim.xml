@@ -42,8 +42,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Koliko je ljudi (korisnika) koje će zahvatiti projekt"
-                    android:inputType="number"
-                    android:text="5" />
+                    android:inputType="number" />
 
                 <!--Koliko takvih projekata postoji na netu-->
                 <EditText
@@ -51,8 +50,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Koliko takvih projekata postoji na netu"
-                    android:inputType="number"
-                    android:text="5" />
+                    android:inputType="number" />
 
                 <!--Koliko vi vjerujete da ce projekt uspjeti-->
                 <EditText
@@ -60,8 +58,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Koliko vi vjerujete da ce projekt uspjeti"
-                    android:inputType="number"
-                    android:text="5" />
+                    android:inputType="number" />
 
                 <!--Koliko cete uloziti u projekt-->
                 <EditText
@@ -69,8 +66,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Koliko cete uloziti u projekt"
-                    android:inputType="number"
-                    android:text="5" />
+                    android:inputType="number" />
 
                 <!--Koliko je realno da ce projekt uspjeti-->
                 <EditText
@@ -78,8 +74,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Koliko je realno da ce projekt uspjeti"
-                    android:inputType="number"
-                    android:text="5" />
+                    android:inputType="number" />
 
                 <!--Tko ce uloziti u projekt-->
                 <EditText
@@ -108,8 +103,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Kolika je sansa da ce netko uloziti u vas projekt"
-                    android:inputType="number"
-                    android:text="5" />
+                    android:inputType="number" />
 
                 <!--Koliko je clanova u vasem timu-->
                 <EditText
@@ -117,8 +111,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Koliko je clanova u vasem timu"
-                    android:inputType="number"
-                    android:text="5" />
+                    android:inputType="number" />
 
                 <Button
                     android:id="@+id/btnMembers"
@@ -132,3 +125,5 @@
     </LinearLayout>
 
 </ScrollView>
+
+
